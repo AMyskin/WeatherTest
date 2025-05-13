@@ -37,8 +37,7 @@ final class DailyForecastCell: UITableViewCell {
 
         iconImageView.contentMode = .scaleAspectFit
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
-        iconImageView.widthAnchor.constraint(equalToConstant: 30).isActive = true
-        iconImageView.heightAnchor.constraint(equalToConstant: 30).isActive = true
+
 
         let hStack = UIStackView(arrangedSubviews: [dayLabel, iconImageView, tempRangeLabel])
         hStack.axis = .horizontal
@@ -53,6 +52,9 @@ final class DailyForecastCell: UITableViewCell {
             hStack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             hStack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             hStack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+
+            iconImageView.widthAnchor.constraint(equalToConstant: 30),
+            iconImageView.heightAnchor.constraint(equalToConstant: 30),
         ])
     }
 

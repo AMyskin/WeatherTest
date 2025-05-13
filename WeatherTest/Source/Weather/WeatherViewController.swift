@@ -134,8 +134,7 @@ final class WeatherViewController: UIViewController, WeatherDisplayLogic {
             dailyTableView.topAnchor.constraint(equalTo: hourlyCollectionView.bottomAnchor, constant: 24),
             dailyTableView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 16),
             dailyTableView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: -16),
-            dailyTableView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor, constant: -16),
-            dailyTableView.heightAnchor.constraint(equalToConstant: 180),
+            dailyTableView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
 
             // Констрейнты для error и retry
             errorLabel.centerYAnchor.constraint(equalTo: scrollView.centerYAnchor),
@@ -157,6 +156,15 @@ final class WeatherViewController: UIViewController, WeatherDisplayLogic {
     private var hourlyItems: [WeatherModels.HourlyItem] = []
     private var dailyItems: [WeatherModels.DailyItem] = []
 
+    private func updateTableConstraints() {
+        let tableHeight = self.dailyTableView.contentSize.height
+        self.dailyTableView.constraints
+            .filter { $0.firstAttribute == .height }
+            .forEach { $0.isActive = false }
+
+        self.dailyTableView.heightAnchor.constraint(equalToConstant: tableHeight).isActive = true
+    }
+
     func displayWeather(viewModel: WeatherModels.ViewModel) {
         refreshControl.endRefreshing()
         errorLabel.isHidden = true
@@ -175,6 +183,7 @@ final class WeatherViewController: UIViewController, WeatherDisplayLogic {
         hourlyCollectionView.isHidden = false
         hourlyCollectionView.reloadData()
         dailyTableView.reloadData()
+        updateTableConstraints()
     }
 
 
