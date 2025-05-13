@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		1B07154A2DD3A69C00404715 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1B0714BB2DD34A7500404715 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1B0714C22DD34A7500404715;
+			remoteInfo = WeatherTest;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1B0714C32DD34A7500404715 /* WeatherTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B0715462DD3A69C00404715 /* WeatherTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,10 +40,22 @@
 			path = WeatherTest;
 			sourceTree = "<group>";
 		};
+		1B0715472DD3A69C00404715 /* WeatherTestTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WeatherTestTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B0714C02DD34A7500404715 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B0715432DD3A69C00404715 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0714C52DD34A7500404715 /* WeatherTest */,
+				1B0715472DD3A69C00404715 /* WeatherTestTests */,
 				1B0714C42DD34A7500404715 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				1B0714C32DD34A7500404715 /* WeatherTest.app */,
+				1B0715462DD3A69C00404715 /* WeatherTestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +108,29 @@
 			productReference = 1B0714C32DD34A7500404715 /* WeatherTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1B0715452DD3A69C00404715 /* WeatherTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1B07154C2DD3A69C00404715 /* Build configuration list for PBXNativeTarget "WeatherTestTests" */;
+			buildPhases = (
+				1B0715422DD3A69C00404715 /* Sources */,
+				1B0715432DD3A69C00404715 /* Frameworks */,
+				1B0715442DD3A69C00404715 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1B07154B2DD3A69C00404715 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				1B0715472DD3A69C00404715 /* WeatherTestTests */,
+			);
+			name = WeatherTestTests;
+			packageProductDependencies = (
+			);
+			productName = WeatherTestTests;
+			productReference = 1B0715462DD3A69C00404715 /* WeatherTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -95,6 +143,10 @@
 				TargetAttributes = {
 					1B0714C22DD34A7500404715 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					1B0715452DD3A69C00404715 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 1B0714C22DD34A7500404715;
 					};
 				};
 			};
@@ -113,12 +165,20 @@
 			projectRoot = "";
 			targets = (
 				1B0714C22DD34A7500404715 /* WeatherTest */,
+				1B0715452DD3A69C00404715 /* WeatherTestTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		1B0714C12DD34A7500404715 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B0715442DD3A69C00404715 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,7 +195,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1B0715422DD3A69C00404715 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1B07154B2DD3A69C00404715 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1B0714C22DD34A7500404715 /* WeatherTest */;
+			targetProxy = 1B07154A2DD3A69C00404715 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1B0714D72DD34A7700404715 /* Debug */ = {
@@ -148,11 +223,14 @@
 				DEVELOPMENT_TEAM = X98JSWP28N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherTest/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For weather location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "For weather location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For weather location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -160,9 +238,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = amyskin.WeatherTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -176,11 +258,14 @@
 				DEVELOPMENT_TEAM = X98JSWP28N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeatherTest/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "For weather location";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "For weather location";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "For weather location";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -188,9 +273,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = amyskin.WeatherTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -313,6 +402,44 @@
 			};
 			name = Release;
 		};
+		1B07154D2DD3A69C00404715 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X98JSWP28N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amyskin.WeatherTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherTest";
+			};
+			name = Debug;
+		};
+		1B07154E2DD3A69C00404715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X98JSWP28N;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amyskin.WeatherTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WeatherTest.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WeatherTest";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -330,6 +457,15 @@
 			buildConfigurations = (
 				1B0714D72DD34A7700404715 /* Debug */,
 				1B0714D82DD34A7700404715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1B07154C2DD3A69C00404715 /* Build configuration list for PBXNativeTarget "WeatherTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B07154D2DD3A69C00404715 /* Debug */,
+				1B07154E2DD3A69C00404715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
